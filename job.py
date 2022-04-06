@@ -97,7 +97,7 @@ class Job:
     @property
     def _report_body_temperature_url(self) -> str:
         hour = get_current_hour()
-        item_id = 1 if 7 <= hour <= 9 else 2 if 12 <= hour <= 14 else 3
+        item_id = 1 if 0 <= hour <= 12 else 2 if 12 <= hour <= 18 else 3
         return f'https://e-report.neu.edu.cn/inspection/items/{item_id}/records'
 
     @property
