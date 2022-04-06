@@ -174,7 +174,7 @@ class Job:
 
     def _report_body_temperature(self):
         try:
-            resp: Response = self._client.post(https://e-report.neu.edu.cn/inspection/items/1/records,
+            resp: Response = self._client.post(self._report_body_temperature_url,
                                                data=self._report_body_temperature_body,
                                                headers=self._update_info_header)
             print(resp.status_code)
